@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TK Rodas e Pneus | Pneus e rodas em até 10x sem juros</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">Consulte preço e disponibilidade direto no WhatsApp: (31) 99728-5481</div>
+
+  <header>
+    <div class="wrap cab">
+      <a href="#" class="logo"><img src="logo.jpg" alt="TK Rodas e Pneus"></a>
+      <form class="busca" id="busca-texto" role="search">
+        <input type="search" id="q" placeholder="Busque por marca, modelo ou medida" aria-label="Buscar produtos">
+        <button type="submit">Buscar</button>
+      </form>
+      <a href="#" class="entrar">Entrar</a>
+      <a class="wpp-btn" href="https://wa.me/5531997285481?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20TK%20Rodas%20e%20Pneus." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Fale no WhatsApp</a>
+      <button class="carrinho-btn" id="abrir-carrinho" aria-label="Abrir carrinho">Carrinho <span id="contador">0</span></button>
+    </div>
+    <nav class="wrap menu" aria-label="Principal">
+      <a href="#produtos" data-tipo="pneu">Pneus</a>
+      <a href="#produtos" data-tipo="roda">Rodas</a>
+      <a href="#categorias">Acessórios</a>
+      <a href="#marcas">Marcas</a>
+      <a href="#produtos" data-tipo="todos">Ofertas</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Nossas lojas</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Pneus e rodas para o seu carro, com montagem e entrega</h1>
+        <p>Escolha pela medida, depois consulte o preço e a disponibilidade pelo WhatsApp.</p>
+      </div>
+      <form class="medida" id="busca-medida">
+        <h2>Encontre pela medida</h2>
+        <label>Largura <select id="f-largura"><option value="">Todas</option></select></label>
+        <label>Perfil <select id="f-perfil"><option value="">Todos</option></select></label>
+        <label>Aro <select id="f-aro"><option value="">Todos</option></select></label>
+        <button type="submit" class="btn">Buscar</button>
+        <p class="dica">A medida está escrita na lateral do pneu, por exemplo 195/55R15.</p>
+      </form>
+    </div>
+  </section>
+
+  <main>
+    <section class="wrap" id="produtos">
+      <div class="titulo-sec">
+        <h2>Destaques da semana</h2>
+        <div class="abas" id="abas">
+          <button class="ativa" data-tipo="todos">Tudo</button>
+          <button data-tipo="pneu">Pneus</button>
+          <button data-tipo="roda">Rodas</button>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="vazio" id="vazio" hidden>Nenhum produto encontrado. Tente outra medida ou limpe os filtros.</p>
+    </section>
+
+    <section class="wrap" id="categorias">
+      <h2>Navegue por categoria</h2>
+      <div class="cats">
+        <a href="#produtos" data-tipo="pneu" class="cat"><b>Pneus de carro</b><span>Passeio, SUV e picape</span></a>
+        <a href="#produtos" data-tipo="roda" class="cat"><b>Rodas de liga leve</b><span>Aros 14 a 20</span></a>
+        <a href="#produtos" data-tipo="todos" class="cat"><b>Pneus de moto</b><span>Rua e trilha</span></a>
+        <a href="#produtos" data-tipo="todos" class="cat"><b>Acessórios</b><span>Calibradores, válvulas e mais</span></a>
+      </div>
+    </section>
+
+    <section class="servicos" id="servicos">
+      <div class="wrap">
+        <h2>Montagem, balanceamento e alinhamento</h2>
+        <p>Compre online e agende o serviço em uma loja parceira perto de você.</p>
+        <a href="#contato" class="btn">Contratar serviço</a>
+      </div>
+    </section>
+
+    <section class="wrap" id="marcas">
+      <h2>Nossas marcas</h2>
+      <ul class="marcas">
+        <li>Michelin</li><li>Pirelli</li><li>Bridgestone</li><li>Continental</li>
+        <li>Goodyear</li><li>Firestone</li><li>Kumho</li><li>Itaro</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <div class="wrap rodape">
+      <div><h3>TK Rodas e Pneus</h3><p>Contagem, MG<br>WhatsApp: <a class="wpp-link" href="https://wa.me/5531997285481?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20TK%20Rodas%20e%20Pneus." target="_blank" rel="noopener">(31) 99728-5481</a></p></div>
+      <div><h3>Ajuda</h3><a href="#">Perguntas frequentes</a><a href="#">Trocas e devoluções</a><a href="#">Meus pedidos</a></div>
+      <div><h3>Institucional</h3><a href="#">Garantia</a><a href="#">Política de privacidade</a></div>
+    </div>
+    <p class="copy">© 2026 TK Rodas e Pneus. Projeto de portfólio, os produtos são ilustrativos.</p>
+  </footer>
+
+
+  <div class="fundo" id="fundo" hidden></div>
+  <aside class="gaveta" id="gaveta" aria-label="Carrinho" hidden>
+    <div class="gaveta-topo"><h2>Seu carrinho</h2><button id="fechar-carrinho" aria-label="Fechar carrinho">✕</button></div>
+    <ul id="itens"></ul>
+    <a class="btn-wpp" id="enviar-pedido" href="#" target="_blank" rel="noopener">Enviar lista ao vendedor</a>
+    <button class="limpar" id="limpar">Esvaziar carrinho</button>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
